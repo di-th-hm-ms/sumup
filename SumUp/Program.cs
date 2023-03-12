@@ -28,7 +28,7 @@ namespace MyApplication
         private static List<Article> GetNewsArticles(string topic, DateTime fromDate)
         {
             // Create News API service
-            var newsApiClient = new NewsApiClient("e183b0598e204980969039dc8aff222d");
+            var newsApiClient = new NewsApiClient("");
             var articlesResponse = newsApiClient.GetEverything(new EverythingRequest
             {
                 Q = topic,
@@ -52,7 +52,7 @@ namespace MyApplication
             // Create Open AI service
             var openAiService = new OpenAIService(new OpenAiOptions()
             {
-                ApiKey = "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"
+                ApiKey = ""
             });
 
             Console.WriteLine("\n\nAttempting to summarize articles...\n\n");
